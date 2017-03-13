@@ -1,9 +1,16 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Mar 20, 2017
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//**********************
+//Only main menu changed
+//**********************
 namespace cis237assignment4
 {
     //Class to handle all of the User Interface operations
@@ -31,7 +38,12 @@ namespace cis237assignment4
             Console.WriteLine("What would you like to do?");
             Console.WriteLine("1. Add a new droid to the system");
             Console.WriteLine("2. Print the list of droids out");
-            Console.WriteLine("3. Exit the program");
+            //****************
+            //New Menu Options
+            //****************
+            Console.WriteLine("3. Categorize by model");
+            Console.WriteLine("4. Sort by total cost");
+            Console.WriteLine("5. Exit the program");
         }
 
         //Method to get a menu choice
