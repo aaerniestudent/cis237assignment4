@@ -198,7 +198,8 @@ namespace cis237assignment4
         //**********************
         public void MergeSort()
         {
-            
+            MergeSort merge = new MergeSort();
+            merge.sort(droidCollection, lengthOfCollection);
         }
 
     }
