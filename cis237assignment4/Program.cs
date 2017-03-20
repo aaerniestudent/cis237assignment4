@@ -42,7 +42,7 @@ namespace cis237assignment4
             droidCollection.Add("Vanadium", "Utility", "Silver", true, false, true);
 
 
-            //While the choice is not equal to 3, continue to do work with the program
+            //While the choice is not equal to 5, continue to do work with the program
             while (choice != 5)
             {
                 //Test which choice was made
