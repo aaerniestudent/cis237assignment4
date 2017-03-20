@@ -346,5 +346,16 @@ namespace cis237assignment4
             }
         }
 
+        //**************************
+        //displays a sent in message
+        //**************************
+        //Used to show that the sorts happened successfully
+        public void Display(string s)
+        {
+            Console.WriteLine();
+            Console.WriteLine(s);
+            Console.WriteLine();
+        }
+
     }
 }

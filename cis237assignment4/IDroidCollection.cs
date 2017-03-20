@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Mar 20, 2017
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +20,11 @@ namespace cis237assignment4
         
         //Method to get the data for a droid into a nicely formated string that can be output.
         string GetPrintString();
+
+        //*************************
+        //Categorize and Merge sort
+        void CategorizeModels();
+
+        void MergeSort();
     }
 }

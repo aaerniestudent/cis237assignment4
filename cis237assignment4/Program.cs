@@ -1,7 +1,6 @@
 ﻿//Anthony Aernie
 //CIS237 MW 6:00
 //Mar 20, 2017
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +23,6 @@ namespace cis237assignment4
             userInterface.DisplayMainMenu();
             //Get the choice that the user makes
             int choice = userInterface.GetMenuChoice();
-
 
             //*****************
             //Hard coded Droids
@@ -66,10 +64,14 @@ namespace cis237assignment4
 
                     //Choose to Categorize by Model
                     case 3:
+                        droidCollection.CategorizeModels();
+                        userInterface.Display("Categorized Successfully");
                         break;
 
                     //Choose to Sort total cost
-                    case 4:
+                    case 4:                        
+                        droidCollection.MergeSort();
+                        userInterface.Display("Merge Sort Successful");
                         break;
                 }
                 //Re-display the menu, and re-prompt for the choice

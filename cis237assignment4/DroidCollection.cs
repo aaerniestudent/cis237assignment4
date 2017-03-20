@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Mar 20, 2017
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -124,5 +127,79 @@ namespace cis237assignment4
             //return the completed string
             return returnString;
         }
+
+        
+
+        //*******************
+        //Categorize by model
+        //*******************
+        public void CategorizeModels()
+        {
+            //declare queue and stacks
+            GenericQueue<IDroid> queue = new GenericQueue<IDroid>();
+            GenericStack<IDroid> pro = new GenericStack<IDroid>();
+            GenericStack<IDroid> uti = new GenericStack<IDroid>();
+            GenericStack<IDroid> jan = new GenericStack<IDroid>();
+            GenericStack<IDroid> ast = new GenericStack<IDroid>();
+            //sort the collection array into stacks
+            foreach (IDroid droid in droidCollection) {
+                //we cannot have the null droids in the array counted for
+                if (droid != null)
+                {                    
+                    switch (droid.Model)
+                    {
+                        case "Protocol":
+                            //push onto stack
+                            pro.AddToTop(droid);
+                            break;
+                        case "Utility":
+                            uti.AddToTop(droid);
+                            break;
+                        case "Janitor":
+                            jan.AddToTop(droid);
+                            break;
+                        case "Astromech":
+                            ast.AddToTop(droid);
+                            break;
+                        default: queue.AddToBack(droid); break;
+                    }
+                }
+            }
+            //Remove from stacks and add to queue
+            //order to be displayed is astromech, janitor, utility, protocol                        
+            while (!ast.IsEmpty)
+            {
+                //pop off of stack, and then enqueue that item
+                queue.AddToBack(ast.RemoveFromTop());
+            }
+            while (!jan.IsEmpty)
+            {
+                queue.AddToBack(jan.RemoveFromTop());
+            }
+            while (!uti.IsEmpty)
+            {
+                queue.AddToBack(uti.RemoveFromTop());
+            }
+            while (!pro.IsEmpty)
+            {
+                queue.AddToBack(pro.RemoveFromTop());
+            }
+            //Replace collection array with queue
+            int c = 0;
+            while (!queue.IsEmpty)
+            {
+                //dequeue item into collection array
+                droidCollection[c++] = queue.RemoveFromFront();
+            }
+        }
+
+        //**********************
+        //MergeSort
+        //**********************
+        public void MergeSort()
+        {
+            
+        }
+
     }
 }
