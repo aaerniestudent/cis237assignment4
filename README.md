@@ -89,6 +89,7 @@ Be sure to think about what the time complexity for the bucket sort will be. Thi
 ## Outside Resources Used
 
 Algorithms book by Sedgewick and Wayne
+
 https://msdn.microsoft.com/en-us/library/system.icomparable(v=vs.110).aspx
 
 ## Known Problems, Issues, And/Or Errors in the Program
